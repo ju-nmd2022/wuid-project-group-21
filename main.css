@@ -1,0 +1,168 @@
+/* how to refer to our fonts
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/* variables that can be used all over the document source: https://www.w3schools.com/css/css3_variables.asp */
+:root {
+  --pointsize14: 0.875em;
+  --pointsize20: 1.25em;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+/* removing the scroll bar from the whole site, source: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* start of header */
+header {
+  background-color: black;
+  position: sticky;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(images/enterance-header.jpg);
+  height: 37em;
+  background-size: cover;
+}
+
+.logo {
+  margin-right: auto;
+  max-width: 5em;
+  padding: 1.25em;
+  cursor: pointer;
+  float: left;
+}
+
+.nav-links li,
+a {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  font-size: var(--pointsize14);
+  color: #fff;
+  display: block;
+  padding: 0.8em 0.5em;
+}
+
+.nav-links {
+  list-style-type: none;
+  overflow: hidden;
+  align-items: center;
+  padding: 0em 4em 0em 5em;
+}
+
+.nav-links li {
+  float: left;
+  text-align: center;
+}
+
+.nav-links .icon {
+  float: right;
+}
+.nav-links .icon img {
+  max-width: 1.25em;
+}
+/* end of header  */
+
+/* start of entry point of the site*/
+.headline {
+  min-height: 37em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  font-size: 2.5em;
+  padding-bottom: 1em;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 40em;
+  min-height: 2em;
+  background-color: #ccc;
+  border-radius: 40px;
+  display: flex;
+  justify-content: left;
+  padding: 0em 1em;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1em 1em 0.8em 0em;
+}
+.search-button img {
+  width: 1.25em;
+}
+
+/* sourve for removing styling from form input: https://www.folkstalk.com/tech/remove-outline-of-input-css-with-code-examples/  */
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+
+::placeholder {
+  color: #000;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+}
+/* end of entry point of the site */
+
+/* start of footer  */
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+main {
+  padding-bottom: 20em;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: var(--pointsize14);
+  height: 20em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+footer img {
+  width: 2em;
+  float: left;
+  padding: 0em 1em;
+}
+
+footer p {
+  float: right;
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+  padding-bottom: 1em;
+}
+
+footer li {
+  padding: 3em;
+  display: flex;
+  align-items: center;
+}
+/* end of footer  */
