@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Details</title>
+    <link rel="stylesheet" href="orderdetails.css" />
+    <script src="main.js" defer></script>
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" />
+    <!-- links below are for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="pantry check logo" class="logo" />
+    </header>
+    <nav>
+      <a href="#"> <h3 class="active">Order Details</h3></a>
+      <img src="images/arrow-right.svg" alt="arrow to the right" />
+      <a href="#"> <h3>Confirm Order</h3></a>
+    </nav>
+    <main class="grid-container">
+      <section class="your-order">
+        <h2>Your Order</h2>
+        <div class="tages">
+          <p>Items</p>
+          <p>Price</p>
+        </div>
+
+        <article>
+          <hr />
+          <img src="/images/items/eggs.jpg" alt="product image of eggs" />
+        </article>
+
+        <article>
+          <hr />
+          <img
+            src="/images/items/blueberries.jpg"
+            alt="product image of blueberries"
+          />
+        </article>
+        <article>
+          <hr />
+          <img
+            src="/images/items/maple-syrup.jpg"
+            alt="product photo of maple syrup"
+          />
+        </article>
+        <article>
+          <hr />
+          <img
+            src="/images/items/baking-powder.jpg"
+            alt="product image of baking powder"
+          />
+        </article>
+
+        <article>
+          <hr />
+          <p>Shipping</p>
+
+          <hr />
+        </article>
+      </section>
+      <section class="details">
+        <h2>Details</h2>
+        <!-- source for forms: https://web.dev/payment-and-address-form-best-practices/  -->
+        <form action="orderconfirmation.html" method="get">
+          <div class="customer-information">
+            <div class="form-item names">
+              <label for="firstname lastname">Name*</label>
+              <input
+                type="text"
+                name="fistname"
+                id="firstname"
+                placeholder="Firsht name"
+                required
+              />
+              <input
+                class="form-item-left"
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Last name"
+                required
+              />
+            </div>
+            <div class="form-item wide">
+              <label for="phone">Phone number*</label>
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                placeholder="Phone number"
+                required
+              />
+            </div>
+            <div class="form-item wide">
+              <label for="email">Email*</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="form-item wide">
+              <label for="address">Delivery address*</label>
+              <textarea
+                name="address"
+                id="address"
+                autocomplete="address"
+                placeholder="Address"
+                required
+              ></textarea>
+            </div>
+            <div class="form-item">
+              <label for="postalcode city">Postal code and city*</label>
+              <input
+                name="postalcode"
+                id="postalcode"
+                autocomplete="postal-code"
+                placeholder="Postal code"
+                required
+              />
+
+              <select
+                class="form-item-left"
+                name="city"
+                id="city"
+                autocomplete="city"
+                required
+              >
+                <option selected value="SPACER"></option>
+                <option value="Stockholm">Stockholm</option>
+                <option value="Göteborg">Göteborg</option>
+                <option value="Malmö">Malmö</option>
+                <option value="Uppsala">Uppsala</option>
+                <option value="Sollentuna">Sollentuna</option>
+                <option value="Södermalm">Södermalm</option>
+                <option value="Västerås">Västerås</option>
+                <option value="Örebro">Örebro</option>
+                <option value="Linköping">Linköping</option>
+                <option value="Helsingborg">Helsingborg</option>
+                <option value="Jönköping">Jönköping</option>
+              </select>
+            </div>
+          </div>
+          <div class="payment-selection">
+            <h2>Payment Method</h2>
+            <div class="payment-option">
+              <input type="radio" name="payment" id="swish" value="swich" />
+              <label for="swish"
+                >Swish <img src="images/payment/swish.svg" alt="Swich logo"
+              /></label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment" id="paypal" value="paypal" />
+              <label for="paypal"
+                >PayPal <img src="images/payment/paypal.svg" alt="PayPal logo"
+              /></label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment" id="credit" value="credit" />
+              <label for="credit"
+                >Credit card
+                <img src="images/payment/visa.svg" alt="visa logo" /><img
+                  src="images/payment/mastercard.svg"
+                  alt="mastercard logo"
+              /></label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment" id="depit" value="depit" />
+              <label for="depit"
+                >Depit card <img src="images/payment/visa.svg" alt="visa logo"
+              /></label>
+            </div>
+          </div>
+          <button type="submit">Continue</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
