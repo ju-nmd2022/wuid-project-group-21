@@ -28,69 +28,165 @@
     <main class="grid-container">
       <section class="your-order">
         <h2>Your Order</h2>
-        <div class="tages">
+        <div class="tags">
           <p>Items</p>
           <p>Price</p>
         </div>
+        <div class="products">
+          <article class="product" id="eggs">
+            <hr />
+            <div class="product-details">
+              <div class="product-image">
+                <img src="/images/items/eggs.jpg" alt="product image of eggs" />
+                <div>
+                  <h4>Eggs</h4>
+                  <p id="removeEggs">Remove item</p>
+                </div>
+              </div>
+              <p class="price" value="20.90">20.90</p>
+            </div>
+          </article>
 
-        <article>
-          <hr />
-          <img src="/images/items/eggs.jpg" alt="product image of eggs" />
-        </article>
+          <article class="product" id="blueberries">
+            <hr />
+            <div class="product-details">
+              <div class="product-image">
+                <img
+                  src="/images/items/blueberries.jpg"
+                  alt="product image of blueberries"
+                />
+                <div>
+                  <h4>Blueberries</h4>
+                  <p>Remove item</p>
+                </div>
+              </div>
+              <p class="price" value="25.95">25.95</p>
+            </div>
+          </article>
 
-        <article>
-          <hr />
-          <img
-            src="/images/items/blueberries.jpg"
-            alt="product image of blueberries"
-          />
-        </article>
-        <article>
-          <hr />
-          <img
-            src="/images/items/maple-syrup.jpg"
-            alt="product photo of maple syrup"
-          />
-        </article>
-        <article>
-          <hr />
-          <img
-            src="/images/items/baking-powder.jpg"
-            alt="product image of baking powder"
-          />
-        </article>
+          <article class="product">
+            <hr />
+            <div class="product-details">
+              <div class="product-image">
+                <img
+                  src="/images/items/syrup.jpg"
+                  alt="product photo of maple syrup"
+                />
+                <div>
+                  <h4>Maple syrup</h4>
+                  <p>Remove item</p>
+                </div>
+              </div>
+              <p class="price" value="45.95">45.95</p>
+            </div>
+          </article>
 
-        <article>
-          <hr />
-          <p>Shipping</p>
+          <article class="product">
+            <hr />
+            <div class="product-details">
+              <div class="product-image">
+                <img
+                  src="/images/items/powder.jpg"
+                  alt="product image of baking powder"
+                />
+                <div>
+                  <h4>Baking powder</h4>
+                  <p>Remove item</p>
+                </div>
+              </div>
+              <p class="price" value="9">9</p>
+            </div>
+          </article>
 
-          <hr />
-        </article>
+          <article class="product">
+            <hr />
+            <div class="product-details">
+              <div class="product-image">
+                <img
+                  src="/images/items/sugar.jpg"
+                  alt="product image of sugar"
+                />
+                <div>
+                  <h4>Sugar</h4>
+                  <p>Remove item</p>
+                </div>
+              </div>
+              <p class="price" value="12">12</p>
+            </div>
+          </article>
+
+          <article class="product">
+            <hr />
+            <div class="product-details">
+              <div class="product-image">
+                <img src="/images/items/milk.jpg" alt="product image of milk" />
+                <div>
+                  <h4>Milk</h4>
+                  <p>Remove item</p>
+                </div>
+              </div>
+              <p class="price" value="8">8</p>
+            </div>
+          </article>
+
+          <article class="product">
+            <hr />
+            <div class="product-details">
+              <div class="product-image">
+                <img
+                  src="/images/items/flour.jpg"
+                  alt="product image of flour"
+                />
+                <div>
+                  <h4>Flour</h4>
+                  <p>Remove item</p>
+                </div>
+              </div>
+              <p class="price" value="18">18</p>
+            </div>
+          </article>
+
+          <article>
+            <hr />
+            <div class="product-details">
+              <p class="shipping">Shipping</p>
+              <p class="price" value="40">40</p>
+            </div>
+            <hr />
+          </article>
+        </div>
+        <div class="total">
+          <h4>Total</h4>
+          <p>141.5</p>
+          <h4>SEK</h4>
+        </div>
       </section>
       <section class="details">
         <h2>Details</h2>
         <!-- source for forms: https://web.dev/payment-and-address-form-best-practices/  -->
-        <form action="orderconfirmation.html" method="get">
+        <form action="orderconfirmation.html" method="GET">
           <div class="customer-information">
-            <div class="form-item names">
+            <div class="form-item">
               <label for="firstname lastname">Name*</label>
-              <input
-                type="text"
-                name="fistname"
-                id="firstname"
-                placeholder="Firsht name"
-                required
-              />
-              <input
-                class="form-item-left"
-                type="text"
-                name="lastname"
-                id="lastname"
-                placeholder="Last name"
-                required
-              />
+              <div class="names">
+                <input
+                  type="text"
+                  name="fistname"
+                  id="firstname"
+                  placeholder="Firsht name"
+                  required
+                />
+                <input
+                  class="last-name"
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Last name"
+                  required
+                />
+              </div>
             </div>
-            <div class="form-item wide">
+            <div class="form-item">
               <label for="phone">Phone number*</label>
               <input
                 type="number"
@@ -100,7 +196,7 @@
                 required
               />
             </div>
-            <div class="form-item wide">
+            <div class="form-item">
               <label for="email">Email*</label>
               <input
                 type="email"
@@ -110,7 +206,7 @@
                 required
               />
             </div>
-            <div class="form-item wide">
+            <div class="form-item">
               <label for="address">Delivery address*</label>
               <textarea
                 name="address"
@@ -122,64 +218,73 @@
             </div>
             <div class="form-item">
               <label for="postalcode city">Postal code and city*</label>
-              <input
-                name="postalcode"
-                id="postalcode"
-                autocomplete="postal-code"
-                placeholder="Postal code"
-                required
-              />
-
-              <select
-                class="form-item-left"
-                name="city"
-                id="city"
-                autocomplete="city"
-                required
-              >
-                <option selected value="SPACER"></option>
-                <option value="Stockholm">Stockholm</option>
-                <option value="Göteborg">Göteborg</option>
-                <option value="Malmö">Malmö</option>
-                <option value="Uppsala">Uppsala</option>
-                <option value="Sollentuna">Sollentuna</option>
-                <option value="Södermalm">Södermalm</option>
-                <option value="Västerås">Västerås</option>
-                <option value="Örebro">Örebro</option>
-                <option value="Linköping">Linköping</option>
-                <option value="Helsingborg">Helsingborg</option>
-                <option value="Jönköping">Jönköping</option>
-              </select>
+              <div class="names">
+                <input
+                  name="postalcode"
+                  id="postalcode"
+                  autocomplete="postal-code"
+                  placeholder="Postal code"
+                  required
+                />
+                <select
+                  class="last-name"
+                  name="city"
+                  id="city"
+                  autocomplete="city"
+                  required
+                >
+                  <option selected value="SPACER"></option>
+                  <option value="Stockholm">Stockholm</option>
+                  <option value="Göteborg">Göteborg</option>
+                  <option value="Malmö">Malmö</option>
+                  <option value="Uppsala">Uppsala</option>
+                  <option value="Sollentuna">Sollentuna</option>
+                  <option value="Södermalm">Södermalm</option>
+                  <option value="Västerås">Västerås</option>
+                  <option value="Örebro">Örebro</option>
+                  <option value="Linköping">Linköping</option>
+                  <option value="Helsingborg">Helsingborg</option>
+                  <option value="Jönköping">Jönköping</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="payment-selection">
             <h2>Payment Method</h2>
             <div class="payment-option">
               <input type="radio" name="payment" id="swish" value="swich" />
+
               <label for="swish"
-                >Swish <img src="images/payment/swish.svg" alt="Swich logo"
-              /></label>
+                ><img src="images/payment/swish.svg" alt="Swich logo" />
+                Swish</label
+              >
             </div>
             <div class="payment-option">
               <input type="radio" name="payment" id="paypal" value="paypal" />
+
               <label for="paypal"
-                >PayPal <img src="images/payment/paypal.svg" alt="PayPal logo"
-              /></label>
+                ><img src="images/payment/paypal.svg" alt="PayPal logo" />
+                PayPal</label
+              >
             </div>
             <div class="payment-option">
               <input type="radio" name="payment" id="credit" value="credit" />
+
               <label for="credit"
-                >Credit card
-                <img src="images/payment/visa.svg" alt="visa logo" /><img
+                ><img
                   src="images/payment/mastercard.svg"
                   alt="mastercard logo"
-              /></label>
+                />
+                <img src="images/payment/visa.svg" alt="visa logo" />
+                Credit card</label
+              >
             </div>
             <div class="payment-option">
               <input type="radio" name="payment" id="depit" value="depit" />
-              <label for="depit"
-                >Depit card <img src="images/payment/visa.svg" alt="visa logo"
-              /></label>
+              <label for="depit">
+                <img src="images/payment/visa.svg" alt="visa logo" /> Depit
+                card</label
+              >
             </div>
           </div>
           <button type="submit">Continue</button>

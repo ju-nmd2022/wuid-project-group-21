@@ -1,6 +1,7 @@
 /* how to refer to our fonts
 font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif; */
+
 :root {
   --pointsize14: 0.875em;
   --pointsize20: 1.25em;
@@ -16,6 +17,9 @@ font-family: 'Roboto', sans-serif; */
   color: #000;
 }
 
+body {
+  accent-color: var(--hightlight);
+}
 /* removing the scroll bar from the whole site, source: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 body::-webkit-scrollbar {
   display: none;
@@ -75,8 +79,8 @@ h2 {
   margin: 1em 0em 0.5em 0em;
 }
 /* end of page layout */
-.customer-information {
-}
+
+/* start of form  */
 .form-item label {
   display: block;
   font-size: 0.75em;
@@ -88,20 +92,52 @@ h2 {
 textarea,
 select {
   padding: 0.5em 1em;
+  width: 100%;
 }
 
-.wide input,
-textarea {
-  width: 80%;
+.names {
+  display: flex;
+  width: 100%;
 }
 
-/* your order styling  */
-
-.your-order img {
-  max-width: 6.25em;
-  max-height: 6.25em;
+.last-name {
+  margin-left: 5px;
 }
 
+/* removing the arrows from phone number input  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* end of form  */
+
+/* start of payment method */
+.payment-selection {
+  width: 100%;
+  /* display: flex;
+  flex-direction: column; */
+}
+.payment-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2em 0em;
+}
+
+.payment-option label {
+  display: flex;
+  align-items: center;
+}
+
+.payment-option img {
+  margin-right: 1em;
+}
+
+/* radio button styling source: https://codepen.io/AngelaVelasquez/pen/DGeErL */
+
+/* submit button  */
 button {
   background-color: var(--hightlight);
   border: none;
@@ -112,5 +148,63 @@ button {
   font-family: "Raleway", sans-serif;
   color: #fff;
   float: right;
-  margin: 5em 15% 5em 0em;
+  margin: 5em 0 5em 0em;
 }
+/* end of payment method */
+
+/* start of "your order" styling  */
+.your-order img {
+  max-width: 6.25em;
+  padding-right: 2em;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 4em;
+  font-size: 0.75em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: var(--pointsize14);
+  font-weight: 100;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.product-image {
+  display: flex;
+}
+.product-image p {
+  font-size: 0.75em;
+}
+.price {
+  font-size: var(--pointsize14);
+}
+.shipping {
+  margin-left: 8.25em;
+  margin-bottom: 4em;
+}
+
+.total {
+  display: flex;
+  align-items: baseline;
+  justify-content: right;
+  margin-top: 1em;
+  margin-bottom: 10em;
+}
+
+.total p {
+  font-size: var(--pointsize14);
+  font-weight: 100;
+  padding-left: 1em;
+  padding-right: 0.5em;
+}
+/* end of "your order" styling  */
