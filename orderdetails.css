@@ -184,13 +184,16 @@ h4 {
 }
 .product-image p {
   font-size: 0.75em;
+  cursor: pointer;
 }
+
 .price {
   font-size: var(--pointsize14);
 }
 .shipping {
-  margin-left: 8.25em;
+  margin-left: 9.25em;
   margin-bottom: 4em;
+  font-size: var(--pointsize14);
 }
 
 .total {
