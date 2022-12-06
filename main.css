@@ -225,6 +225,7 @@ main p {
   text-align: center;
   padding: 1.5em;
 }
+
 /* end of main content  */
 
 /* start of footer  */
@@ -275,4 +276,6 @@ footer li {
   align-items: center;
   justify-content: center;
 }
+
 /* end of footer  */
+
