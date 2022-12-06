@@ -1,0 +1,11 @@
+.logo {
+    margin-right: auto;
+    max-width: 5em;
+    padding: 1.25em;
+    cursor: pointer;
+    float: left;
+  }
+
+  .text{
+    font-family: Raleway;
+  }
