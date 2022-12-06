@@ -56,13 +56,6 @@ function orderdetails() {
     flourPrduct.style.display = "none";
   }
   removeFlour.addEventListener("click", removeItemFlour);
-
-  // calculating the total
-  function total() {
-    var total = 0;
-    var cartPrice = document.getElementsByClassName("price")[0];
-    var price = parseFloat(cartPrice.innerText.replace("$", ""));
-  }
-  total = Math.round(total * 100) / 100;
-  document.getElementById("total")[0].innerText = "$" + total;
 }
+
+function totalCalculation() {}
