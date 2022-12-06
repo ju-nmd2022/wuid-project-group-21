@@ -11,6 +11,7 @@ font-family: 'Roboto', sans-serif; */
 * {
   padding: 0%;
   margin: 0%;
+  /* border: 2px red solid; */
 }
 
 /* removing the scroll bar from the whole site, source: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
@@ -23,7 +24,7 @@ header {
   position: sticky;
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
     url(images/enterance-header.jpg);
-  height: 30em;
+  height: 80vh;
   background-size: cover;
 }
 
