@@ -19,7 +19,7 @@ font-family: 'Roboto', sans-serif; */
 }
 
 body {
-  accent-color: var(--hightlight);
+  /* accent-color: var(--hightlight); */
 }
 /* removing the scroll bar from the whole site, source: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 body::-webkit-scrollbar {
@@ -123,6 +123,27 @@ input::-webkit-inner-spin-button {
   align-items: center;
   width: 100%;
   margin: 2em 0em;
+}
+
+/* radio button styling source: https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
+input[type="radio"] {
+  /* removing the inherit styling */
+  appearance: none;
+  /* styling the un selected radio buttons */
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.5em solid #ccc;
+  outline: 0px #fff solid;
+  outline-offset: 0;
+  transition: all 100ms ease-in;
+}
+
+/* styling when selected */
+input[type="radio"]:checked {
+  outline: 2px var(--hightlight) solid;
+  outline-offset: 0.1em;
+  border: 0.5em solid var(--hightlight);
 }
 
 .payment-option label {
