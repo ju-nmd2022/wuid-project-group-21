@@ -158,11 +158,12 @@
         </div>
         <div class="total">
           <h4>Total</h4>
-          <p id="total">141.5</p>
+          <p id="total">179.8</p>
           <h4>SEK</h4>
         </div>
       </section>
       <section class="details">
+        <!-- customer detail survey -->
         <h2>Details</h2>
         <!-- source for forms: https://web.dev/payment-and-address-form-best-practices/  -->
         <form action="orderconfirmation.html" method="GET">
@@ -253,7 +254,7 @@
           <div class="payment-selection">
             <h2>Payment Method</h2>
             <div class="payment-option">
-              <input type="radio" name="payment" id="swish" value="swich" />
+              <input type="radio" name="payment" id="swish" value="Swish" />
 
               <label for="swish"
                 ><img src="images/payment/swish.svg" alt="Swich logo" />
@@ -261,7 +262,7 @@
               >
             </div>
             <div class="payment-option">
-              <input type="radio" name="payment" id="paypal" value="paypal" />
+              <input type="radio" name="payment" id="paypal" value="PayPal" />
 
               <label for="paypal"
                 ><img src="images/payment/paypal.svg" alt="PayPal logo" />
@@ -269,7 +270,12 @@
               >
             </div>
             <div class="payment-option">
-              <input type="radio" name="payment" id="credit" value="credit" />
+              <input
+                type="radio"
+                name="payment"
+                id="credit"
+                value="Credit Card"
+              />
 
               <label for="credit"
                 ><img
@@ -281,7 +287,12 @@
               >
             </div>
             <div class="payment-option">
-              <input type="radio" name="payment" id="depit" value="depit" />
+              <input
+                type="radio"
+                name="payment"
+                id="depit"
+                value="Depit Card"
+              />
               <label for="depit">
                 <img src="images/payment/visa.svg" alt="visa logo" /> Depit
                 card</label
