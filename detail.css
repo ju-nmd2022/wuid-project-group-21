@@ -50,7 +50,7 @@ header {
 .fixed {
   position: fixed;
   width: 100%;
-  /* background-color: #000; */
+  background-color: white;
   z-index: -1;
 }
 
@@ -452,6 +452,7 @@ input:checked + .slider:before {
 .sidebar {
   grid-area: sidebar;
 }
+
 .lowbar {
   grid-area: lowbar;
   background-color: white;
@@ -660,5 +661,21 @@ footer li {
 
   .lowbar {
     display: none;
+  }
+
+  .title {
+    justify-content: center;
+  }
+
+  .instructions {
+    justify-content: center;
+  }
+
+  .blueberry-pancakes {
+    font-size: 50pt;
+  }
+
+  body {
+    background-color: rgb(217, 215, 215);
   }
 }
