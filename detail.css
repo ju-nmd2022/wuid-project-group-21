@@ -101,22 +101,33 @@ a {
 
 /* Body */
 .title {
+  display: grid;
+  grid-template-columns: 10px 100%;
+  grid-template-rows: 40px 40px;
+  grid-template-areas:
+    "backarrow blueberry-pancakes"
+    ". category";
   padding-top: 80px;
   padding-left: 12%;
   grid-area: title;
   background-color: white;
+  align-items: center;
+  gap: 20px;
 }
 
 .blueberry-pancakes {
+  grid-area: blueberry-pancakes;
   font-size: 35pt;
 }
 
 .category {
+  grid-area: category;
   font-size: 20pt;
 }
 
 .backarrow {
-  position: absolute;
+  width: 240%;
+  grid-area: backarrow;
 }
 
 /* .numbers { */
