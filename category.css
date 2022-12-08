@@ -268,5 +268,83 @@ footer li {
   align-items: center;
   justify-content: center;
 }
-
 /* end of footer  */
+
+/* responsiveness for tablet sizes */
+@media only screen and (max-width: 800px) {
+  /* start of page layout */
+  .grid-continer {
+    display: grid;
+    grid-column-gap: 0.75em;
+    grid-row-gap: 3em;
+    grid-template-areas:
+      "title title"
+      "section1 section2"
+      "section3 section4"
+      "section5 section6"
+      "section7 section8"
+      "section9 section10"
+      "section11 section12"
+      "footer footer";
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(8, auto);
+    width: 100%;
+    padding-bottom: 25em;
+  }
+}
+
+/* responsiveness for mobile sizes */
+@media only screen and (max-width: 550px) {
+  /* start of page layout */
+  .grid-continer {
+    display: grid;
+    grid-column-gap: 0.75em;
+    grid-row-gap: 3em;
+    grid-template-areas:
+      "title"
+      "section1"
+      "section2"
+      "section3"
+      "section4"
+      "section5"
+      "section6"
+      "section7"
+      "section8"
+      "section9"
+      "section10"
+      "section11"
+      "section12"
+      "footer";
+
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(14, auto);
+    width: 100%;
+    padding-bottom: 25em;
+  }
+
+  section {
+    max-width: 100%;
+  }
+
+  /* size of the divs that hold the item images */
+  section div {
+    height: 100vw;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* images that are horizontally longer get this class */
+  .horizotal {
+    position: absolute;
+    max-width: 100%;
+    z-index: -1;
+  }
+
+  /* images that are vertically longer get this class */
+  .vertical {
+    position: absolute;
+    max-height: 100%;
+    z-index: -1;
+  }
+}
