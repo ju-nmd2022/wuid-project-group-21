@@ -18,9 +18,6 @@ font-family: 'Roboto', sans-serif; */
   /* border: 2px red solid; */
 }
 
-body {
-  /* accent-color: var(--hightlight); */
-}
 /* removing the scroll bar from the whole site, source: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 body::-webkit-scrollbar {
   display: none;
@@ -94,6 +91,8 @@ textarea,
 select {
   padding: 0.5em 1em;
   width: 100%;
+  border: 1px #ccc solid;
+  border-radius: 5px;
 }
 
 .names {
