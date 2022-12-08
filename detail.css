@@ -5,26 +5,27 @@ body {
   /* background-color: aquamarine; */
 }
 
-head {
-  opacity: 40%;
-  background-color: black;
-}
+/* head { */
+/*   opacity: 40%; */
+/*   background-color: black; */
+/* } */
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1% 1fr 1fr 6%;
-  grid-template-rows: 30rem 17rem 62rem 16rem 180px 340px 200px 20rem;
+  grid-template-columns: 1fr 1fr 80px;
+  grid-template-rows: 100px 30rem 17rem 62rem 16rem 180px 340px 200px 20rem;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-template-areas:
-    "image image image image"
-    "title title title title"
-    "sidebar2 instructions ingredients sidebar"
-    "lowbar lowbar lowbar lowbar"
-    "grey grey grey grey"
-    "suggestions suggestions suggestions suggestions"
-    "grey2 grey2 grey2 grey2"
-    "footer footer footer footer";
+    "header header header"
+    "image image image"
+    "title title title"
+    "instructions ingredients sidebar"
+    "lowbar lowbar lowbar"
+    "grey grey grey"
+    "suggestions suggestions suggestions"
+    "grey2 grey2 grey2"
+    "footer footer footer";
 }
 
 /* Header */
@@ -38,10 +39,14 @@ head {
 
 /* Start of header */
 header {
+  grid-area: header;
+  grid-column: 1/4;
   position: sticky;
+  z-index: 3;
 }
 
 .logo {
+  position: relative;
   float: left;
   margin-right: auto;
   max-width: 5em;
@@ -54,7 +59,6 @@ header {
   position: fixed;
   width: 100%;
   background-color: #fff;
-  z-index: -1;
 }
 
 .nav-links li,
@@ -89,6 +93,41 @@ a {
 .nav-links .icon img {
   max-width: 1.25em;
 }
+
+/* Shoppingbag */
+
+/* .shoppingbag { */
+/*   display: none; */
+/* } */
+
+.shoppingbag1 {
+  display: none;
+}
+
+.shoppingbag2 {
+  display: none;
+}
+
+.shoppingbag3 {
+  display: none;
+}
+
+.shoppingbag4 {
+  display: none;
+}
+
+.shoppingbag5 {
+  display: none;
+}
+
+.shoppingbag6 {
+  display: none;
+}
+
+.shoppingbag7 {
+  display: none;
+}
+
 /* End of header  */
 
 /* Meal image */
@@ -99,20 +138,24 @@ a {
   /* background-color: teal; */
 }
 
+.pancakes {
+  object-fit: cover;
+}
+
 /* Body */
 .title {
   display: grid;
-  grid-template-columns: 10px 100%;
+  grid-template-columns: 10px 70%;
   grid-template-rows: 40px 40px;
   grid-template-areas:
     "backarrow blueberry-pancakes"
     ". category";
-  padding-top: 80px;
-  padding-left: 12%;
+  padding-top: 70px;
+  padding-left: 10%;
   grid-area: title;
   background-color: white;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 .blueberry-pancakes {
@@ -126,74 +169,108 @@ a {
 }
 
 .backarrow {
-  width: 240%;
+  width: 2rem;
   grid-area: backarrow;
+  list-style-type: none;
 }
 
-/* .numbers { */
-/*   display: flex; */
-/*   flex-direction: column; */
-/*   right: 90%; */
-/*   font-size: 26pt; */
-/*   position: absolute; */
-/*   padding-right: 110px; */
-/* } */
+.arrowlink {
+  display: inline-block;
+}
+
+/* Instructions */
+.instructiontext {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: repeat(8, 100px);
+  grid-template-areas:
+    ". instructiontitle"
+    "nr1 ins1"
+    "nr2 ins2"
+    "nr3 ins3"
+    "nr4 ins4"
+    "nr5 ins5"
+    "nr6 ins6"
+    "nr7 ins7"
+    "nr8 ins8";
+  font-family: Roboto;
+  align-items: center;
+}
+
+.instructiontitle {
+  grid-area: instructiontitle;
+}
 
 /* Instruction numbers */
 .nr1 {
+  grid-area: nr1;
   font-size: 26pt;
-  padding-left: 100px;
 }
 .nr2 {
+  grid-area: nr2;
   font-size: 26pt;
-  padding-left: 100px;
-  padding-top: 24px;
 }
 .nr3 {
+  grid-area: nr3;
   font-size: 26pt;
-  padding-left: 100px;
-  padding-top: 18pt;
 }
 .nr4 {
+  grid-area: nr4;
   font-size: 26pt;
-  padding-left: 100px;
-  padding-top: 18pt;
 }
 .nr5 {
+  grid-area: nr5;
   font-size: 26pt;
-  padding-left: 100px;
-  padding-top: 18pt;
 }
 .nr6 {
+  grid-area: nr6;
   font-size: 26pt;
-  padding-left: 100px;
-  padding-top: 18pt;
 }
 .nr7 {
+  grid-area: nr7;
   font-size: 26pt;
-  padding-left: 100px;
-  padding-top: -100px;
 }
 .nr8 {
+  grid-area: nr8;
   font-size: 26pt;
-  padding-left: 100px;
+}
+
+/* Instructiontext */
+.ins1 {
+  grid-area: ins1;
+}
+.ins2 {
+  grid-area: ins2;
+}
+.ins3 {
+  grid-area: ins3;
+}
+.ins4 {
+  grid-area: ins4;
+}
+.ins5 {
+  grid-area: ins5;
+}
+.ins6 {
+  grid-area: ins6;
+}
+.ins7 {
+  grid-area: ins7;
+}
+.ins8 {
+  grid-area: ins8;
 }
 
 /* Instructions */
 .instructions {
   display: flex;
   flex-direction: column;
-  line-height: 2.2;
   padding-left: 16%;
   padding-right: 16%;
   padding-top: 50px;
   grid-area: instructions;
   background-color: white;
   font-size: 14pt;
-}
-
-.instructiontext {
-  font-family: Roboto;
 }
 
 /* Ingredients */
@@ -203,7 +280,7 @@ a {
   line-height: 1.8;
   padding-left: 16%;
   padding-right: 10px;
-  padding-top: 11%;
+  padding-top: 40px;
   grid-area: ingredients;
   font-size: 14pt;
   background-color: rgb(217, 215, 215);
@@ -224,6 +301,12 @@ a {
     "maplesyrup switch7";
 
   align-items: center;
+}
+
+.buttondiv {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 100px;
 }
 
 .milk {
@@ -253,17 +336,6 @@ a {
 .maplesyrup {
   grid-area: maplesyrup;
 }
-/* .switchbar { */
-/*   padding-top: 315px; */
-/*   padding-bottom: 165px; */
-/*   grid-area: switchbar; */
-/* background-color: rgb(217, 215, 215); */
-/*   background-color: aquamarine; */
-/* display: flex; */
-/* flex-direction: column; */
-/* justify-content: space-evenly; */
-/*   line-height: 4; */
-/* } */
 
 /* The following 50 lines of code were taken from: https://www.w3schools.com/howto/howto_css_switch.asp Accessed: 2022-12-01 */
 /* The switch - the box around the slider */
@@ -272,6 +344,7 @@ a {
   display: inline-block;
   width: 60px;
   height: 34px;
+  z-index: 0;
 }
 
 /* Hide default HTML checkbox */
@@ -332,6 +405,7 @@ input:checked + .slider:before {
 /* Switches */
 .switch1 {
   grid-area: switch1;
+  position: relative;
 }
 
 .switch2 {
@@ -380,16 +454,7 @@ input:checked + .slider:before {
 /* Margins */
 .sidebar {
   grid-area: sidebar;
-  background-color: white;
 }
-
-.sidebar2 {
-  font-family: Roboto;
-  padding-top: 180px;
-  grid-area: sidebar2;
-  background-color: white;
-}
-
 .lowbar {
   grid-area: lowbar;
   background-color: white;
@@ -425,6 +490,12 @@ input:checked + .slider:before {
   width: 340px;
   height: 340px;
   background-color: white;
+  background-size: cover;
+  object-position: 0 -20%;
+}
+
+.recipe1img {
+  object-fit: cover;
 }
 
 .recipe2 {
@@ -457,7 +528,7 @@ input:checked + .slider:before {
 /* Suggestion text */
 .grey2 {
   display: grid;
-  grid-template-columns: 400px 400px 400px 400px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas: "lunch dinner1 dinner2 dinner3";
   /*   justify-content: space-around; */
   grid-area: grey2;
@@ -548,4 +619,49 @@ footer li {
   align-items: center;
   justify-content: center;
 }
-/* end of footer  */
+/* End of footer  */
+
+/* Media Query */
+@media screen and (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (10, 1fr);
+    grid-template-areas:
+      "header"
+      "image"
+      "title"
+      "instructions"
+      "ingredients"
+      "sidebar"
+      "lowbar"
+      "grey"
+      "suggestions"
+      "grey2"
+      "footer";
+  }
+
+  footer {
+    display: none;
+  }
+
+  .grey2 {
+    display: none;
+  }
+
+  .instructions {
+    font-size: 22pt;
+    line-height: 1.6;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar2 {
+    display: none;
+  }
+
+  .lowbar {
+    display: none;
+  }
+}
