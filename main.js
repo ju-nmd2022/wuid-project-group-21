@@ -198,3 +198,14 @@ function receiptFunction() {
   const dispalyedPriceReceipt = Math.round(totalReceipt * 100) / 100;
   document.getElementById("totalInReceipt").innerText = dispalyedPriceReceipt;
 }
+
+function link() {
+  var blueberryRecipe = document.getElementById("pancakeLink");
+  blueberryRecipe.addEventListener(
+    "click",
+    function () {
+      location.href = "detail.html";
+    },
+    false
+  );
+}

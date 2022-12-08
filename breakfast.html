@@ -7,6 +7,7 @@
     <title>Breakfast</title>
     <link rel="stylesheet" href="category.css" />
     <script src="main.css" defer></script>
+    <script src="main.js" defer></script>
     <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" />
     <!-- links below are for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,8 +17,7 @@
       rel="stylesheet"
     />
   </head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <body>
+  <body onload="link()">
     <header class="header">
       <img src="images/logo.svg" alt="pantry check logo" class="logo" />
       <nav class="fixed">
@@ -57,69 +57,127 @@
       </div>
 
       <section class="section1">
-        <div><img src="images/acaibowl.jpg" alt="acai bowl" /></div>
-        <p>20min Breakfast</p>
-        <h3>Acai bowl</h3>
+        <div>
+          <img class="vertical" src="images/acaibowl.jpg" alt="acai bowl" />
+        </div>
+        <p>20 min</p>
+        <h3>Acai bowl with berries and granola</h3>
       </section>
       <section class="section2">
-        <div><img src="images/frenchtoast.jpg" alt="french toast" /></div>
-        <p>15min Breakfast</p>
-        <h3>French toast</h3>
+        <div>
+          <img
+            class="vertical"
+            src="images/frenchtoast.jpg"
+            alt="french toast"
+          />
+        </div>
+        <p>15 min</p>
+        <h3>French toast with honey</h3>
       </section>
       <section class="section3">
-        <div><img src="images/applepie.jpg" alt="apple pie" /></div>
-        <p>20min Breakfast</p>
+        <div>
+          <img class="vertical" src="images/applepie.jpg" alt="apple pie" />
+        </div>
+        <p>20 min</p>
         <h3>Apple pie</h3>
       </section>
-      <section class="section4">
-        <a href="detail.html">
-          <div><img src="Images2/pancakes.png" alt="pancake" /></div>
-        </a>
-        <p>10min Breakfast</p>
+      <section id="pancakeLink" class="section4">
+        <div>
+          <img class="horizotal" src="Images2/pancakes.png" alt="pancake" />
+        </div>
+        <p>10 min</p>
         <h3>Blueberry Pancakes</h3>
       </section>
       <section class="section5">
-        <div><img src="" alt="" /></div>
-        <p>Place holder</p>
-        <h3>Place holder</h3>
+        <div>
+          <img
+            class="horizotal"
+            src="images/breakfast/english.jpg"
+            alt="english breakfast"
+          />
+        </div>
+        <p>30 min</p>
+        <h3>Full Enlish breakfast</h3>
       </section>
       <section class="section6">
-        <div><img src="" alt="" /></div>
-        <p>Place holder</p>
-        <h3>Place holder</h3>
+        <div>
+          <img
+            class="horizotal"
+            src="images/breakfast/spinach.jpg"
+            alt="spinach sandwich with egg"
+          />
+        </div>
+        <p>10 min</p>
+        <h3>Grilled spinach sandwich</h3>
       </section>
       <section class="section7">
-        <div><img src="" alt="" /></div>
-        <p>Place holder</p>
-        <h3>Place holder</h3>
+        <div>
+          <img
+            class="horizotal"
+            src="images/breakfast/orange-porridge.jpg"
+            alt="porridge with orange"
+          />
+        </div>
+        <p>15 min</p>
+        <h3>Spiced orange porridge</h3>
       </section>
       <section class="section8">
-        <div><img src="" alt="" /></div>
-        <p>Place holder</p>
-        <h3>Place holder</h3>
+        <div>
+          <img
+            class="vertical"
+            src="images/breakfast/fruityoghurt.jpg"
+            alt="fruity jugurt with mint"
+          />
+        </div>
+        <p>10 min</p>
+        <h3>Fruity jugurt with mint</h3>
       </section>
       <section class="section9">
-        <div><img src="" alt="" /></div>
-        <p>Place holder</p>
-        <h3>Place holder</h3>
+        <div>
+          <img
+            class="horizotal"
+            src="images/breakfast/orangepancake.jpg"
+            alt="pancakes with oranges"
+          />
+        </div>
+        <p>20 min</p>
+        <h3>Orange vanilla pancakes</h3>
       </section>
       <section class="section10">
-        <div><img src="" alt="" /></div>
-        <p>Place holder</p>
-        <h3>Place holder</h3>
+        <div>
+          <img
+            class="vertical"
+            src="images/breakfast/cocolateporridge.jpg"
+            alt="cocolate porrage with coconut granola"
+          />
+        </div>
+        <p>20 min</p>
+        <h3>Cocolate porrage with coconut granola</h3>
       </section>
       <section class="section11">
-        <div><img src="" alt="" /></div>
-        <p>Place holder</p>
-        <h3>Place holder</h3>
+        <div>
+          <img
+            class="vertical"
+            src="images/breakfast/avocado.jpg"
+            alt="avocado toast"
+          />
+        </div>
+        <p>15 min</p>
+        <h3>Avocado toast with soft boiled egg</h3>
       </section>
       <section class="section12">
-        <div><img src="" alt="" /></div>
-        <p>Place holder</p>
-        <h3>Place holder</h3>
+        <div>
+          <img
+            class="vertical"
+            src="images/breakfast/cocolateoats.jpg"
+            alt="Oatmeal with bananas, chocolate and peanuts"
+          />
+        </div>
+        <p>20 min</p>
+        <h3>Oatmeal with bananas, chocolate and peanuts</h3>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <ul>
         <li>
           <img src="images/footer/facebook.svg" alt="facebook logo" />
