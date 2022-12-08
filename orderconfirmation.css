@@ -15,6 +15,7 @@ font-family: 'Roboto', sans-serif; */
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   color: #000;
+  /* border: 1px red solid; */
 }
 
 body {
@@ -110,4 +111,54 @@ button {
 
 p {
   font-size: var(--pointsize14);
+}
+
+/* responsiveness for mobile sizes */
+@media only screen and (max-width: 550px) {
+  /* start of page layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2;
+    grid-template-areas:
+      "your-order"
+      "details";
+  }
+  .your-order {
+    margin: auto;
+    width: 100%;
+    max-width: 80%;
+  }
+  .details {
+    margin: auto;
+    width: 100%;
+    max-width: 80%;
+  }
+  h2 {
+    font-size: x-large;
+    margin: 2em 0em 0.5em 0em;
+  }
+  /* end of page layout */
+
+  /* start of header*/
+  .logo {
+    max-width: 4em;
+  }
+  h3 {
+    font-size: 0.75em;
+  }
+  .active {
+    background-color: var(--hightlight);
+    color: #fff;
+  }
+  /* end of header*/
+
+  button {
+    font-size: large;
+    margin: 2em 0 3em 0em;
+  }
+
+  p {
+    font-size: 1em;
+  }
 }

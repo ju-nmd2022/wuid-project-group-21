@@ -1,0 +1,681 @@
+html,
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+
+  /* background-color: aquamarine; */
+}
+
+:root {
+  --pointsize14: 0.875em;
+  --pointsize20: 1.25em;
+  --hightlight: #85b79d;
+}
+/* head { */
+/*   opacity: 40%; */
+/*   background-color: black; */
+/* } */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px;
+  grid-template-rows: 100px 30rem 17rem 62rem 16rem 180px 340px 200px 20rem;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas:
+    "header header header"
+    "image image image"
+    "title title title"
+    "instructions ingredients sidebar"
+    "lowbar lowbar lowbar"
+    "grey grey grey"
+    "suggestions suggestions suggestions"
+    "grey2 grey2 grey2"
+    "footer footer footer";
+}
+
+header {
+  position: sticky;
+}
+
+.logo {
+  float: left;
+  margin-right: auto;
+  max-width: 5em;
+  padding: 1.25em;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: -1;
+}
+
+.nav-links li,
+a {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  font-size: var(--pointsize14);
+  color: #000;
+  display: block;
+  padding: 0.8em 0em 0.5em 0.5em;
+}
+
+.current {
+  color: var(--hightlight);
+}
+
+.nav-links {
+  list-style-type: none;
+  overflow: hidden;
+  align-items: center;
+  padding: 0em 4em 0em 15%;
+}
+
+.nav-links li {
+  float: left;
+  text-align: center;
+}
+
+.nav-links .icon {
+  float: right;
+}
+.nav-links .icon img {
+  max-width: 1.25em;
+}
+
+.shoppingbagbutton img {
+  max-width: 1em;
+}
+
+/* Shoppingbag */
+
+/* .shoppingbag { */
+/*   display: none; */
+/* } */
+
+.shoppingbag1 {
+  display: none;
+}
+
+.shoppingbag2 {
+  display: none;
+}
+
+.shoppingbag3 {
+  display: none;
+}
+
+.shoppingbag4 {
+  display: none;
+}
+
+.shoppingbag5 {
+  display: none;
+}
+
+.shoppingbag6 {
+  display: none;
+}
+
+.shoppingbag7 {
+  display: none;
+}
+
+/* End of header  */
+
+/* Meal image */
+.image {
+  grid-area: image;
+  /* background-size: cover; */
+  /* object-position: 0 -20%; */
+  /* background-color: teal; */
+}
+
+.pancakes {
+  object-fit: cover;
+}
+
+/* Body */
+.title {
+  display: grid;
+  grid-template-columns: 10px 70%;
+  grid-template-rows: 40px 40px;
+  grid-template-areas:
+    "backarrow blueberry-pancakes"
+    ". category";
+  padding-top: 70px;
+  padding-left: 10%;
+  grid-area: title;
+  background-color: white;
+  align-items: center;
+  gap: 40px;
+}
+
+.blueberry-pancakes {
+  grid-area: blueberry-pancakes;
+  font-size: 35pt;
+}
+
+.category {
+  grid-area: category;
+  font-size: 20pt;
+}
+
+.backarrow {
+  width: 2rem;
+  grid-area: backarrow;
+  list-style-type: none;
+}
+
+.arrowlink {
+  display: inline-block;
+}
+
+/* Instructions */
+.instructiontext {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: repeat(8, 100px);
+  grid-template-areas:
+    ". instructiontitle"
+    "nr1 ins1"
+    "nr2 ins2"
+    "nr3 ins3"
+    "nr4 ins4"
+    "nr5 ins5"
+    "nr6 ins6"
+    "nr7 ins7"
+    "nr8 ins8";
+  font-family: "Roboto", sans-serif;
+  align-items: center;
+}
+
+.instructiontitle {
+  grid-area: instructiontitle;
+}
+
+/* Instruction numbers */
+.nr1 {
+  grid-area: nr1;
+  font-size: 26pt;
+}
+.nr2 {
+  grid-area: nr2;
+  font-size: 26pt;
+}
+.nr3 {
+  grid-area: nr3;
+  font-size: 26pt;
+}
+.nr4 {
+  grid-area: nr4;
+  font-size: 26pt;
+}
+.nr5 {
+  grid-area: nr5;
+  font-size: 26pt;
+}
+.nr6 {
+  grid-area: nr6;
+  font-size: 26pt;
+}
+.nr7 {
+  grid-area: nr7;
+  font-size: 26pt;
+}
+.nr8 {
+  grid-area: nr8;
+  font-size: 26pt;
+}
+
+/* Instructiontext */
+.ins1 {
+  grid-area: ins1;
+}
+.ins2 {
+  grid-area: ins2;
+}
+.ins3 {
+  grid-area: ins3;
+}
+.ins4 {
+  grid-area: ins4;
+}
+.ins5 {
+  grid-area: ins5;
+}
+.ins6 {
+  grid-area: ins6;
+}
+.ins7 {
+  grid-area: ins7;
+}
+.ins8 {
+  grid-area: ins8;
+}
+
+/* Instructions */
+.instructions {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16%;
+  padding-right: 16%;
+  padding-top: 50px;
+  grid-area: instructions;
+  background-color: white;
+  font-size: 14pt;
+}
+
+/* Ingredients */
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8;
+  padding-left: 16%;
+  padding-right: 10px;
+  padding-top: 40px;
+  grid-area: ingredients;
+  font-size: 14pt;
+  background-color: rgb(217, 215, 215);
+}
+
+.ingredienttext {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: 0.9fr 80px;
+  grid-template-rows: repeat(7, 60px);
+  grid-template-areas:
+    "milk switch1"
+    "flour switch2"
+    "egg switch3"
+    "sugar switch4"
+    "blueberries switch5"
+    "bakingpowder switch6"
+    "maplesyrup switch7";
+
+  align-items: center;
+}
+
+.buttondiv {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 100px;
+}
+
+.milk {
+  grid-area: milk;
+}
+
+.flour {
+  grid-area: flour;
+}
+
+.egg {
+  grid-area: egg;
+}
+
+.sugar {
+  grid-area: sugar;
+}
+
+.blueberries {
+  grid-area: blueberries;
+}
+
+.bakingpowder {
+  grid-area: bakingpowder;
+}
+
+.maplesyrup {
+  grid-area: maplesyrup;
+}
+
+/* The following 50 lines of code were taken from: https://www.w3schools.com/howto/howto_css_switch.asp Accessed: 2022-12-01 */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  z-index: 0;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #43944f;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #43944f;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Switches */
+.switch1 {
+  grid-area: switch1;
+  position: relative;
+}
+
+.switch2 {
+  grid-area: switch2;
+}
+
+.switch3 {
+  grid-area: switch3;
+}
+
+.switch4 {
+  grid-area: switch4;
+}
+
+.switch5 {
+  grid-area: switch5;
+}
+
+.switch6 {
+  grid-area: switch6;
+}
+
+.switch7 {
+  grid-area: switch7;
+}
+
+/* Button */
+/* The following 12 lines of code was taken from https://www.w3schools.com/howto/howto_css_pill_button.asp Accessed: 2022-12-01 */
+.button {
+  grid-area: button;
+  font-family: "Raleway", sans-serif;
+  font-weight: Bold;
+  font-size: 18pt;
+  background-color: #43944f;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 170px;
+  cursor: pointer;
+  border-radius: 32px;
+}
+
+/* Margins */
+.sidebar {
+  grid-area: sidebar;
+}
+
+.lowbar {
+  grid-area: lowbar;
+  background-color: white;
+}
+
+/* Suggestions */
+.grey {
+  grid-area: grey;
+  background-color: rgb(217, 215, 215);
+}
+
+.suggestion-text {
+  font-size: 28pt;
+  padding-top: 46px;
+  padding-left: 220px;
+}
+
+/* Suggestion images */
+.suggestions {
+  grid-area: suggestions;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 6px;
+  line-height: 0.4;
+  background-color: rgb(217, 215, 215);
+}
+
+.recipe1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  height: 340px;
+  background-color: white;
+  background-size: cover;
+  object-position: 0 -20%;
+}
+
+.recipe1img {
+  object-fit: cover;
+}
+
+.recipe2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  height: 340px;
+  background-color: white;
+}
+
+.recipe3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  height: 340px;
+  background-color: white;
+}
+
+.recipe4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  height: 340px;
+  background-color: white;
+}
+
+/* Suggestion text */
+.grey2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "lunch dinner1 dinner2 dinner3";
+  /*   justify-content: space-around; */
+  grid-area: grey2;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(217, 215, 215);
+}
+
+.lunch {
+  grid-area: lunch;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.dinner1 {
+  grid-area: dinner1;
+  font-size: 12pt;
+  text-align: center;
+  /* padding-left: 70px; */
+}
+
+.dinner2 {
+  grid-area: dinner2;
+  font-size: 12pt;
+  text-align: center;
+  /* padding-left: 120px; */
+}
+
+.dinner3 {
+  grid-area: dinner3;
+  font-size: 12pt;
+  text-align: center;
+  /* padding-left: 160px; */
+  /* padding-left: 170px; */
+}
+
+/* .grey3 { */
+/*   grid-area: grey3; */
+/*   display: flex; */
+/*   justify-content: space-around; */
+/*   text-align: center; */
+/*   background-color: rgb(217, 215, 215); */
+/* } */
+
+/* Footer */
+body {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+main {
+  padding-bottom: 20em;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: var(--pointsize14);
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+footer img {
+  max-width: 2em;
+  float: left;
+  padding: 0em 1em;
+}
+
+footer p {
+  float: right;
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+  padding-bottom: 1em;
+  justify-content: center;
+}
+
+footer li {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* End of footer  */
+
+/* Media Query */
+@media screen and (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (10, 1fr);
+    grid-template-areas:
+      "header"
+      "image"
+      "title"
+      "instructions"
+      "ingredients"
+      "sidebar"
+      "lowbar"
+      "grey"
+      "suggestions"
+      "grey2"
+      "footer";
+  }
+
+  footer {
+    display: none;
+  }
+
+  .grey2 {
+    display: none;
+  }
+
+  .instructions {
+    font-size: 22pt;
+    line-height: 1.6;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar2 {
+    display: none;
+  }
+
+  .lowbar {
+    display: none;
+  }
+
+  .title {
+    justify-content: center;
+  }
+
+  .instructions {
+    justify-content: center;
+  }
+
+  .blueberry-pancakes {
+    font-size: 50pt;
+  }
+
+  body {
+    background-color: rgb(217, 215, 215);
+  }
+}
