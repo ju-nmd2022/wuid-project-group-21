@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="orderconfirmation.css" />
+    <script src="main.js" defer></script>
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" />
+    <!-- links below are for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="receiptFunction()">
+    <header>
+      <img src="images/logo.svg" alt="pantry check logo" class="logo" />
+    </header>
+    <nav>
+      <a href="orderdetails.html"> <h3>Order Details</h3></a>
+      <img src="images/arrow-right.svg" alt="arrow to the right" />
+      <a href="#"> <h3 class="active">Confirm Order</h3></a>
+    </nav>
+    <main class="grid-container">
+      <section class="your-order">
+        <h2>Your Order</h2>
+        <article id="receiptEggs" class="order-item">
+          <p>Eggs</p>
+          <p>20.90</p>
+        </article>
+        <article id="receiptBlueberries" class="order-item">
+          <p>Blueberries</p>
+          <p>25.95</p>
+        </article>
+        <article id="receiptSyrup" class="order-item">
+          <p>Maple syrup</p>
+          <p>45.95</p>
+        </article>
+        <article id="receiptPowder" class="order-item">
+          <p>Baking powder</p>
+          <p>9</p>
+        </article>
+        <article id="receiptSugar" class="order-item">
+          <p>Sugar</p>
+          <p>12</p>
+        </article>
+        <article id="receiptMilk" class="order-item">
+          <p>Milk</p>
+          <p>8</p>
+        </article>
+        <article id="receiptFlour" class="order-item">
+          <p>Flour</p>
+          <p>18</p>
+        </article>
+        <article class="order-item shipAndTotal">
+          <p>Shipping</p>
+          <p>40</p>
+        </article>
+        <article class="order-item shipAndTotal">
+          <p>Total</p>
+          <p id="totalInReceipt">0</p>
+        </article>
+      </section>
+      <section class="details">
+        <h2>Details</h2>
+        <article>
+          <p class="customer-information" id="results"></p>
+        </article>
+        <button type="submit">Confirm</button>
+      </section>
+    </main>
+  </body>
+</html>

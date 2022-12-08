@@ -1,0 +1,405 @@
+/* how to refer to our fonts
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+:root {
+  --pointsize14: 0.875em;
+  --pointsize20: 1.25em;
+  --pointsize35: 2.1875em;
+  --hightlight: #85b79d;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: #000;
+  /* border: 2px red solid; */
+}
+
+body {
+  /* accent-color: var(--hightlight); */
+}
+/* removing the scroll bar from the whole site, source: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.logo {
+  margin-right: auto;
+  max-width: 5em;
+  padding: 1.25em;
+  cursor: pointer;
+  float: left;
+}
+/* start of bread crums */
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.5em 1em;
+  border-radius: 40px;
+}
+nav img {
+  max-width: 1em;
+}
+.active {
+  background-color: var(--hightlight);
+  color: #fff;
+}
+/* end of bread crums */
+
+/* start of page layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: none;
+  grid-template-areas: "your-order details";
+}
+.your-order {
+  grid-area: your-order;
+  margin-left: 20%;
+  max-width: 70%;
+}
+.details {
+  grid-area: details;
+  margin-left: 10%;
+  max-width: 60%;
+}
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: var(--pointsize35);
+  margin: 1em 0em 0.5em 0em;
+}
+/* end of page layout */
+
+/* start of form  */
+.form-item label {
+  display: block;
+  font-size: 0.75em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.form-item input,
+textarea,
+select {
+  padding: 0.5em 1em;
+  width: 100%;
+}
+
+.names {
+  display: flex;
+  width: 100%;
+}
+
+.last-name {
+  margin-left: 5px;
+}
+
+/* removing the arrows from phone number input  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  visibility: hidden;
+  margin: 0;
+}
+/* end of form  */
+
+/* start of payment method */
+.payment-selection {
+  width: 100%;
+}
+.payment-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2em 0em;
+}
+
+/* radio button styling source: https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
+input[type="radio"] {
+  /* removing the inherit styling */
+  appearance: none;
+  /* styling the un selected radio buttons */
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.5em solid #ccc;
+  outline: 0px #fff solid;
+  outline-offset: 0;
+  transition: all 100ms ease-in;
+}
+
+/* styling when selected */
+input[type="radio"]:checked {
+  outline: 2px var(--hightlight) solid;
+  outline-offset: 0.1em;
+  border: 0.5em solid var(--hightlight);
+}
+
+.payment-option label {
+  display: flex;
+  align-items: center;
+}
+
+.payment-option img {
+  margin-right: 1em;
+}
+
+/* radio button styling source: https://codepen.io/AngelaVelasquez/pen/DGeErL */
+
+/* submit button  */
+button {
+  background-color: var(--hightlight);
+  border: none;
+  border-radius: 40px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-size: var(--pointsize20);
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  float: right;
+  margin: 5em 0 5em 0em;
+}
+/* end of payment method */
+
+/* start of "your order" styling  */
+/* size of the product images */
+.your-order img {
+  max-width: 6.25em;
+  padding-right: 2em;
+}
+
+/* the little text above items "Item" and "Price"  */
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 4em;
+  font-size: 0.75em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* item names */
+h4 {
+  font-size: var(--pointsize14);
+  font-weight: 100;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.product-image {
+  display: flex;
+}
+
+/* adressing the "remove item" text */
+.product-image p {
+  font-size: 0.75em;
+  margin-top: 0.75em;
+  cursor: pointer;
+  border-bottom: 1px #000 solid;
+  max-width: fit-content;
+}
+
+.price {
+  font-size: var(--pointsize14);
+}
+
+.shipping {
+  margin-left: 9.25em;
+  margin-bottom: 4em;
+  font-size: var(--pointsize14);
+}
+
+/* container for the three texts that make up the total line */
+.total {
+  display: flex;
+  align-items: baseline;
+  justify-content: right;
+  margin-top: 1em;
+  margin-bottom: 10em;
+}
+.total p {
+  font-size: var(--pointsize14);
+  font-weight: 100;
+  padding-left: 1em;
+  padding-right: 0.5em;
+}
+/* end of "your order" styling  */
+
+/* responsiveness for tablet sizes */
+@media only screen and (max-width: 770px) {
+  /* layout of the whole page  */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2;
+    grid-template-areas:
+      "your-order"
+      "details";
+  }
+  .your-order {
+    margin: auto;
+    width: 100%;
+  }
+  .details {
+    margin: auto;
+    width: 100%;
+  }
+  h2 {
+    font-size: xx-large;
+  }
+  /* end of layout  */
+
+  /* "details" section styling */
+  /* removing the space between your order and details sections */
+  .total {
+    margin: 0em;
+  }
+  /* adding apropriate spacing between order and details section  */
+  .details h2 {
+    margin-top: 3em;
+  }
+
+  /* adding spacing between form items to make more touch screen frindly */
+  .form-item label {
+    margin-top: 3em;
+  }
+
+  .form-item input,
+  textarea,
+  select {
+    width: 90%;
+  }
+
+  /* payment method styling */
+  .payment-selection {
+    width: 100%;
+  }
+  .payment-option {
+    margin: 3em 0em;
+  }
+
+  .payment-option img {
+    width: 3em;
+  }
+  /* submit button  */
+  button {
+    font-size: large;
+    margin: 2em 0 3em 0em;
+  }
+}
+
+/* responsiveness for mobile sizes */
+@media only screen and (max-width: 425px) {
+  /* layout of the whole page  */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2;
+    grid-template-areas:
+      "your-order"
+      "details";
+  }
+  .your-order {
+    margin: auto;
+    width: 100%;
+    min-width: 85%;
+  }
+  .your-order img {
+    padding: 0px;
+  }
+  .details {
+    margin: auto;
+    width: 90%;
+    min-width: 80%;
+  }
+  h2 {
+    font-size: x-large;
+  }
+  /* end of layout  */
+
+  /* header styling  */
+  h3 {
+    font-size: 0.75em;
+  }
+  .logo {
+    width: 4em;
+  }
+
+  /* "your order" section styling */
+  .tags {
+    padding-right: 1em;
+  }
+
+  .price {
+    float: right;
+  }
+  .product-details {
+    display: flex;
+    align-items: baseline;
+  }
+
+  /* "details" section styling */
+  /* removing the space between your order and details sections */
+  .total {
+    margin: 0em;
+  }
+  /* adding apropriate spacing between order and details section  */
+  .details h2 {
+    margin-top: 3em;
+  }
+
+  /* butting names and address details in a column istead of next to each other */
+  .names {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .last-name {
+    margin-left: 0px;
+    margin-top: 1em;
+  }
+
+  /* adding spacing between form items to make more touch screen frindly */
+  .form-item label {
+    margin-top: 3em;
+  }
+
+  .form-item input,
+  textarea,
+  select {
+    width: 90%;
+  }
+
+  /* payment method styling */
+  .payment-selection {
+    width: 100%;
+  }
+  .payment-option {
+    margin: 3em 0em;
+  }
+
+  .payment-option img {
+    width: 2.5em;
+  }
+  /* submit button  */
+  button {
+    font-size: large;
+    margin: 2em 0 3em 0em;
+  }
+}
