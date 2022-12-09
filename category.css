@@ -275,7 +275,7 @@ footer li {
   /* start of page layout */
   .grid-continer {
     display: grid;
-    grid-column-gap: 0.75em;
+    grid-column-gap: 0em;
     grid-row-gap: 3em;
     grid-template-areas:
       "title title"
@@ -289,18 +289,54 @@ footer li {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(8, auto);
     width: 100%;
-    padding-bottom: 25em;
+    padding-bottom: 20em;
   }
+  h2 {
+    padding: 0em 0em 0em 3em;
+  }
+  section {
+    max-width: 45vw;
+  }
+  section div {
+    height: 45vw;
+    width: 45vw;
+  }
+  .section1,
+  .section5,
+  .section9 {
+    margin: 0px;
+  }
+
+  .section1,
+  .section3,
+  .section5,
+  .section7,
+  .section9,
+  .section11 {
+    margin-left: 1em;
+  }
+
+  /* start of footer  */
+  footer {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  footer ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  }
+  /* end of footer  */
 }
 
 /* responsiveness for mobile sizes */
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 500px) {
   /* start of page layout */
   .grid-continer {
     display: grid;
-    grid-column-gap: 0.75em;
-    grid-row-gap: 3em;
+    grid-row-gap: 0em;
     grid-template-areas:
+      "header"
       "title"
       "section1"
       "section2"
@@ -315,36 +351,126 @@ footer li {
       "section11"
       "section12"
       "footer";
-
     grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(14, auto);
+    grid-template-rows: repeat(15, auto);
     width: 100%;
-    padding-bottom: 25em;
+    padding-bottom: 20em;
   }
 
+  /* start of header  */
+  .logo {
+    max-width: 4em;
+    margin: 0px;
+  }
+  .header {
+    grid-area: header;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-icon-list {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 1em;
+    padding-top: 1em;
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .mobile-icon {
+    padding-right: 1em;
+  }
+
+  /* navigation for meal type  */
+  .nav-links {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
+  }
+  .nav-links li {
+    padding: 0.5em;
+    margin: 0px;
+  }
+
+  .nav-links .icon {
+    display: none;
+  }
+  /* hedline and time filter navigaion */
+  .time-filter {
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+  }
+  h2 {
+    padding: 0px;
+    margin: 0.5em 0em;
+  }
+  .title {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .fixed {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    z-index: -1;
+  }
+  /* end of header  */
+
+  /* start of main content layout */
+  .section1,
+  .section3,
+  .section5,
+  .section7,
+  .section9,
+  .section11 {
+    margin-left: 0em;
+  }
+
+  .section1,
+  .section5,
+  .section9 {
+    margin: 0px;
+  }
   section {
     max-width: 100%;
+    padding: 0px;
+    margin: 0px;
   }
 
   /* size of the divs that hold the item images */
   section div {
     height: 100vw;
     width: 100vw;
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 -0.2em 0.5em 1px gray;
   }
 
-  /* images that are horizontally longer get this class */
-  .horizotal {
-    position: absolute;
-    max-width: 100%;
-    z-index: -1;
+  h3 {
+    padding-bottom: 2em;
   }
+  /* end of main content layout */
 
-  /* images that are vertically longer get this class */
-  .vertical {
-    position: absolute;
-    max-height: 100%;
-    z-index: -1;
+  /* start of footer  */
+  footer {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  footer ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  }
+  /* end of footer  */
+}
+
+/* removing the icons that are added in a different spot in the mobile version  */
+@media only screen and (min-width: 500px) {
+  .mobile-icon-list {
+    display: none;
   }
 }

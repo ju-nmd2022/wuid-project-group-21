@@ -1,4 +1,5 @@
 //function to place the form information in the last page
+//  source for getting the form information: https://onecompiler.com/javascript/3wfknr963
 function placeFormInformation() {
   const results = document.getElementById("results");
   new URLSearchParams(window.location.search).forEach((value) => {
@@ -205,6 +206,15 @@ function link() {
     "click",
     function () {
       location.href = "detail.html";
+    },
+    false
+  );
+
+  var logoLink = document.getElementById("breakfastLogo");
+  logoLink.addEventListener(
+    "click",
+    function () {
+      location.href = "index.html";
     },
     false
   );

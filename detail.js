@@ -26,3 +26,16 @@ document.querySelectorAll(".switch").forEach(function (element) {
     console.log(totalCount);
   });
 });
+
+function linkingToMainPage() {
+  var logoLink = document.getElementById("logo");
+  logoLink.addEventListener(
+    "click",
+    function () {
+      location.href = "index.html";
+    },
+    false
+  );
+}
+
+linkingToMainPage();
