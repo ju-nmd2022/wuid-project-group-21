@@ -68,7 +68,7 @@ a {
 
 /* start of entry point of the site*/
 .headline {
-  min-height: 37em;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,22 +188,16 @@ h1 {
 
 /* image ratio source https://cloudinary.com/guides/automatic-image-cropping/5-ways-to-crop-images-in-html-css */
 main div {
+  height: 30vw;
+  width: 30vw;
   position: relative;
-  width: 100%;
-  height: 0;
-  padding-top: calc(100% * (100 / 100));
+  overflow: hidden;
 }
 
 main div img {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  max-height: 100%;
   z-index: -1;
-}
-.size {
-  height: 666px;
 }
 
 h2 {
