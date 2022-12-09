@@ -11,7 +11,7 @@ font-family: 'Roboto', sans-serif; */
 * {
   padding: 0%;
   margin: 0%;
-  /* border: 2px red solid; */
+  /* border: 1px red solid; */
 }
 
 /* removing the scroll bar from the whole site, source: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
@@ -273,5 +273,149 @@ footer li {
   align-items: center;
   justify-content: center;
 }
-
 /* end of footer  */
+
+/* responsiveness for mobile and small tablet sizes */
+@media only screen and (max-width: 750px) {
+  /* start of page layout */
+  .grid-container {
+    display: grid;
+    grid-row-gap: 1em;
+    grid-template-areas:
+      "fsh"
+      "fsh"
+      "fsh"
+      "ffr"
+      "sfr"
+      "tfr"
+      "ssh"
+      "ssh"
+      "ssh"
+      "fsr"
+      "ssr"
+      "tsr"
+      "tsh"
+      "tsh"
+      "tsh"
+      "ftr"
+      "str"
+      "ttr";
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(18, auto);
+  }
+
+  .fsh,
+  .fsh,
+  .fsh,
+  .ffr,
+  .sfr,
+  .tfr,
+  .ssh,
+  .ssh,
+  .ssh,
+  .fsr,
+  .ssr,
+  .tsr,
+  .tsh,
+  .tsh,
+  .tsh,
+  .ftr,
+  .str,
+  .ttr {
+    margin: 0em;
+    padding: 0em;
+  }
+
+  .icon-list-mobile {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 1em;
+    padding-top: 1em;
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .mobile-icon {
+    padding-right: 1em;
+  }
+
+  .header {
+    height: 60vh;
+  }
+
+  .nav-links .icon {
+    display: none;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: flex;
+    padding: 0em;
+    justify-content: space-evenly;
+  }
+  .headline {
+    margin-top: 3em;
+    padding: 0;
+    min-height: auto;
+  }
+  h1 {
+    font-size: 20pt;
+  }
+  .search-bar {
+    width: 70%;
+    padding: 0em 1em;
+    margin-bottom: 0em;
+  }
+  h2 {
+    font-size: 20pt;
+  }
+
+  /* header  */
+  .logo {
+    max-width: 4em;
+  }
+  .header {
+    grid-area: header;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* main content  */
+  main div {
+    height: 100vw;
+    width: 100vw;
+    padding-inline-start: 0;
+    box-shadow: 0 -0.2em 0.5em 1px gray;
+  }
+
+  main div img {
+    position: absolute;
+    max-height: 100%;
+    z-index: -1;
+  }
+
+  h3 {
+    margin-bottom: 3em;
+  }
+
+  /* start of footer  */
+  footer {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  footer ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  }
+  /* end of footer  */
+}
+
+/* removing the icons that are added in a different spot in the mobile version  */
+@media only screen and (min-width: 750px) {
+  .icon-list-mobile {
+    display: none;
+  }
+}
