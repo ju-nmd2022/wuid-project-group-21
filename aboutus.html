@@ -15,9 +15,14 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script
+  src="https://kit.fontawesome.com/c4254e24a8.js"
+  crossorigin="anonymous"
+></script>
   </head>
   <body>
     <div class="grid-container">
+      <!-- The following 30 lines of code was written by courtsey of Aada-Inkeri Johanna Juvonen -->
       <!-- Header -->
       <header class="header">
         <img
@@ -50,6 +55,7 @@
       </header>
 
       <!-- Body -->
+      <!-- The following 37 lines of code was taken from https://www.youtube.com/watch?v=64qA60U7hNE Accessed: 2023-03-13 -->
       <div class="aboutus">
         <div class="aboutus-text">
           <h1 class="aboutus-title">About Pantry Check</h1>
@@ -63,6 +69,10 @@
           <h2 class="our-history">Our History</h2>
           <p class="our-history-text">The three college friends were constantly using websites with recipes as it's the easiest source of quick and delicious dishes. Seeing how a lot of recipe providers tend to get into details about their personal experience instead of giving useful information about the dish brought the students to the thought of creating their own website where people could easily find all recipes in an intuitive format without useless facts. </br></br> Taking into consideration that usually people want to find and cook their recipe as fast as possible without contributing too much time and energy into it, the idea seemed to become relevant for a big number of people. The friends decided to create their own site which is more simplified and only includes what you need. </br></br> The concept of the website is to provide consumers with facile recipes, which can be made in a short period of time using affordable, yet healthy products. The list of ingredients, presented on the site, will be helpful in terms of planning users grocery purchases. In case a person lacks an ingredient, they can add it to ''shopping list'', which was created with the idea of saving the environment and being financially conscious. From an environmental view point, being aware of what is in your pantry, fridge and freezer reduces food waste and that way helps the planet. </br></br> Creating recipes for students means that their prices should be affordable, yet it's important for ingredients to have a good quality, as people who study and engage their brain and nervous system a lot, need to consume a fair amount of vitamins and nutrients. With the busy lifestyle of modern people in mind, all of the recipes include a preparation time and they can be filterable by it as well as by mealtime. </p>
         </div>
+      </div>
+
+      <div class="feedbacktext">
+        <h2>Rate us!</h2>
       </div>
 
       <!-- Feedback rating -->
@@ -112,5 +122,59 @@
         </ul>
       </footer>
     </div>
+
+
+    <!-- The following 47 lines of code was taken from https://www.youtube.com/watch?v=64qA60U7hNE Accessed: 2023-03-13 -->
+    <!-- Feedback rating -->
+    <script>
+     var stars = document.getElementsByClassName("fa-solid");
+     var emoji = document.getElementById("emoji");
+     
+     stars[0].onclick = function () {
+       stars[0].style.color = "#ffd93b";
+       stars[1].style.color = "#e4e4e4";
+       stars[2].style.color = "#e4e4e4";
+       stars[3].style.color = "#e4e4e4";
+       stars[4].style.color = "#e4e4e4";
+       emoji.style.transform = "translateX(0)";
+     };
+     
+     stars[1].onclick = function () {
+       stars[0].style.color = "#ffd93b";
+       stars[1].style.color = "#ffd93b";
+       stars[2].style.color = "#e4e4e4";
+       stars[3].style.color = "#e4e4e4";
+       stars[4].style.color = "#e4e4e4";
+       emoji.style.transform = "translateX(-100px)";
+     };
+     
+     stars[2].onclick = function () {
+       stars[0].style.color = "#ffd93b";
+       stars[1].style.color = "#ffd93b";
+       stars[2].style.color = "#ffd93b";
+       stars[3].style.color = "#e4e4e4";
+       stars[4].style.color = "#e4e4e4";
+       emoji.style.transform = "translateX(-200px)";
+     };
+     
+     stars[3].onclick = function () {
+       stars[0].style.color = "#ffd93b";
+       stars[1].style.color = "#ffd93b";
+       stars[2].style.color = "#ffd93b";
+       stars[3].style.color = "#ffd93b";
+       stars[4].style.color = "#e4e4e4";
+       emoji.style.transform = "translateX(-300px)";
+     };
+     
+     stars[4].onclick = function () {
+       stars[0].style.color = "#ffd93b";
+       stars[1].style.color = "#ffd93b";
+       stars[2].style.color = "#ffd93b";
+       stars[3].style.color = "#ffd93b";
+       stars[4].style.color = "#ffd93b";
+       emoji.style.transform = "translateX(-400px)";
+     };
+     
+    </script>
   </body>
 </html>

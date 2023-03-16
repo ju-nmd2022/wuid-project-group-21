@@ -220,8 +220,9 @@ function link() {
   );
 }
 
+/* The following 47 lines of code was taken from https://www.youtube.com/watch?v=64qA60U7hNE Accessed: 2023-03-13 */
 // Feedback rating
-var stars = document.getElementByClassName("fas");
+var stars = document.getElementsByClassName("fa-solid");
 var emoji = document.getElementById("emoji");
 
 stars[0].onclick = function () {
