@@ -222,50 +222,91 @@ function link() {
 
 /* The following 47 lines of code was taken from https://www.youtube.com/watch?v=64qA60U7hNE Accessed: 2023-03-13 */
 // Feedback rating
-var stars = document.getElementsByClassName("fa-solid");
-var emoji = document.getElementById("emoji");
+/* let stars = document.getElementsByClassName("fa-solid"); */
+/* let emoji = document.getElementById("emoji"); */
+/*  */
+/* function clickedStars() { */
+/*   stars[0].style.color = "#ffd93b"; */
+/*   stars[1].style.color = "#e4e4e4"; */
+/*   stars[2].style.color = "#e4e4e4"; */
+/*   stars[3].style.color = "#e4e4e4"; */
+/*   stars[4].style.color = "#e4e4e4"; */
+/*   emoji.style.transform = "translateX(0)"; */
+/*  */
+/*   if (stars[1].clicked == true) { */
+/*     stars[0].style.color = "#ffd93b"; */
+/*     stars[1].style.color = "#e4e4e4"; */
+/*     stars[2].style.color = "#e4e4e4"; */
+/*     stars[3].style.color = "#e4e4e4"; */
+/*     stars[4].style.color = "#e4e4e4"; */
+/*     emoji.style.transform = "translateX(0)"; */
+/*   } else { */
+/*     stars[1].style.color = "#e4e4e4"; */
+/*     stars[2].style.color = "#e4e4e4"; */
+/*     stars[3].style.color = "#e4e4e4"; */
+/*     stars[4].style.color = "#e4e4e4"; */
+/*     emoji.style.transform = "translateX(0)"; */
+/*   } */
+/* } */
 
-stars[0].onclick = function () {
-  stars[0].style.color = "#ffd93b";
-  stars[1].style.color = "#e4e4e4";
-  stars[2].style.color = "#e4e4e4";
-  stars[3].style.color = "#e4e4e4";
-  stars[4].style.color = "#e4e4e4";
-  emoji.style.transform = "translateX(0)";
-};
-
-stars[1].onclick = function () {
-  stars[0].style.color = "#ffd93b";
-  stars[1].style.color = "#ffd93b";
-  stars[2].style.color = "#e4e4e4";
-  stars[3].style.color = "#e4e4e4";
-  stars[4].style.color = "#e4e4e4";
-  emoji.style.transform = "translateX(-100px)";
-};
-
-stars[2].onclick = function () {
-  stars[0].style.color = "#ffd93b";
-  stars[1].style.color = "#ffd93b";
-  stars[2].style.color = "#ffd93b";
-  stars[3].style.color = "#e4e4e4";
-  stars[4].style.color = "#e4e4e4";
-  emoji.style.transform = "translateX(-200px)";
-};
-
-stars[3].onclick = function () {
-  stars[0].style.color = "#ffd93b";
-  stars[1].style.color = "#ffd93b";
-  stars[2].style.color = "#ffd93b";
-  stars[3].style.color = "#ffd93b";
-  stars[4].style.color = "#e4e4e4";
-  emoji.style.transform = "translateX(-300px)";
-};
-
-stars[4].onclick = function () {
-  stars[0].style.color = "#ffd93b";
-  stars[1].style.color = "#ffd93b";
-  stars[2].style.color = "#ffd93b";
-  stars[3].style.color = "#ffd93b";
-  stars[4].style.color = "#ffd93b";
-  emoji.style.transform = "translateX(-400px)";
-};
+/* let stars = document.getElementsByClassName("fa-solid"); */
+/* let emoji = document.getElementById("emoji"); */
+/*  */
+/* stars[0].addEventListener("click", function () { */
+/*   stars[0].style.color = "#ffd93b"; */
+/*   stars[1].style.color = "#e4e4e4"; */
+/*   stars[2].style.color = "#e4e4e4"; */
+/*   stars[3].style.color = "#e4e4e4"; */
+/*   stars[4].style.color = "#e4e4e4"; */
+/*   emoji.style.transform = "translateX(0)"; */
+/* }); */
+/*  */
+/* stars[1].addEventListener("click", function () { */
+/*   stars[0].style.color = "#ffd93b"; */
+/*   stars[1].style.color = "#ffd93b"; */
+/*   stars[2].style.color = "#e4e4e4"; */
+/*   stars[3].style.color = "#e4e4e4"; */
+/*   stars[4].style.color = "#e4e4e4"; */
+/*   emoji.style.transform = "translateX(-100px)"; */
+/* }); */
+/*  */
+/* stars[2].addEventListener("click", function () { */
+/*   stars[0].style.color = "#ffd93b"; */
+/*   stars[1].style.color = "#ffd93b"; */
+/*   stars[2].style.color = "#ffd93b"; */
+/*   stars[3].style.color = "#e4e4e4"; */
+/*   stars[4].style.color = "#e4e4e4"; */
+/*   emoji.style.transform = "translateX(-200px)"; */
+/* }); */
+/*  */
+/* stars[3].addEventListener("click", function () { */
+/*   stars[0].style.color = "#ffd93b"; */
+/*   stars[1].style.color = "#ffd93b"; */
+/*   stars[2].style.color = "#ffd93b"; */
+/*   stars[3].style.color = "#ffd93b"; */
+/*   stars[4].style.color = "#e4e4e4"; */
+/*   emoji.style.transform = "translateX(-300px)"; */
+/* }); */
+/*  */
+/* stars[4].addEventListener("click", function () { */
+/*   stars[0].style.color = "#ffd93b"; */
+/*   stars[1].style.color = "#ffd93b"; */
+/*   stars[2].style.color = "#ffd93b"; */
+/*   stars[3].style.color = "#ffd93b"; */
+/*   stars[4].style.color = "#ffd93b"; */
+/*   emoji.style.transform = "translateX(-400px)"; */
+/* }); */
+/*  */
+/* stars.forEach((star, index) => { */
+/*   star.addEventListener("click", () => { */
+/*     // Reset all star colors to "#e4e4e4" */
+/*     stars.forEach((s) => (s.style.color = "#e4e4e4")); */
+/*     // Set the color of clicked star and all previous stars to "#ffd93b" */
+/*     for (let i = 0; i <= index; i++) { */
+/*       stars[i].style.color = "#ffd93b"; */
+/*     } */
+/*     // Update emoji position based on clicked star index */
+/*     emoji.style.transform = `translateX(-${index * 100}px)`; */
+/*   }); */
+/* }); */
+/*  */

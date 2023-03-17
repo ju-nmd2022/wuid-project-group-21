@@ -16,9 +16,10 @@
       rel="stylesheet"
     />
     <script
-  src="https://kit.fontawesome.com/c4254e24a8.js"
-  crossorigin="anonymous"
-></script>
+     src="https://kit.fontawesome.com/c4254e24a8.js"
+     crossorigin="anonymous">
+    </script>
+
   </head>
   <body>
     <div class="grid-container">
@@ -55,7 +56,6 @@
       </header>
 
       <!-- Body -->
-      <!-- The following 37 lines of code was taken from https://www.youtube.com/watch?v=64qA60U7hNE Accessed: 2023-03-13 -->
       <div class="aboutus">
         <div class="aboutus-text">
           <h1 class="aboutus-title">About Pantry Check</h1>
@@ -76,6 +76,7 @@
       </div>
 
       <!-- Feedback rating -->
+      <!-- The following 20 lines of code was taken from https://www.youtube.com/watch?v=64qA60U7hNE Accessed: 2023-03-13 -->
       <div class="feedbackbox">
         <div class="emoji">
             <div id="emoji">
@@ -97,10 +98,8 @@
         </div>
       </div>
 
-
-
-
       <!-- Footer -->
+      <!-- The following 21 lines of code was written by courtsey of Aada-Inkeri Johanna Juvonen -->
       <footer>
         <ul>
           <li>
@@ -123,12 +122,12 @@
       </footer>
     </div>
 
-
-    <!-- The following 47 lines of code was taken from https://www.youtube.com/watch?v=64qA60U7hNE Accessed: 2023-03-13 -->
     <!-- Feedback rating -->
+    <!-- When star is clicked, star changes color to yellow and the rest to gray. TranslateX displays the approriate emoji. -->
+    <!-- The following 47 lines of code was taken from https://www.youtube.com/watch?v=64qA60U7hNE Accessed: 2023-03-13 -->
     <script>
-     var stars = document.getElementsByClassName("fa-solid");
-     var emoji = document.getElementById("emoji");
+     let stars = document.getElementsByClassName("fa-solid");
+     let emoji = document.getElementById("emoji");
      
      stars[0].onclick = function () {
        stars[0].style.color = "#ffd93b";
