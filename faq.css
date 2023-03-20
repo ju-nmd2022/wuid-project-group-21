@@ -130,8 +130,7 @@ a {
 .nav-links .icon img {
   max-width: 1.25em;
 }
-
-.shoppingbagbutton img {
+*/ .shoppingbagbutton img {
   max-width: 1em;
 }
 
@@ -149,13 +148,6 @@ h2 {
   left: 60%;
   width: 800px;
   transform: translate(-50%, -50%);
-}
-
-input {
-  position: relative;
-  display: inline-block;
-  font-size: 20px;
-  box-sizing: border-box;
 }
 
 /*field for question*/
